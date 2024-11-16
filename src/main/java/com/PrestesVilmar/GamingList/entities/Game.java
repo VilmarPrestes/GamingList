@@ -16,26 +16,31 @@ public class Game {
     @Column(name = "game_year")
     private Integer year;
     private String genre;
-    private String plataform;
+    private String platforms;
     private Double score;
     private String imgUrl;
+
+    @Column(columnDefinition = "TEXT")
     private String shortDescription;
-    private String logDescription;
+
+
+    @Column(columnDefinition = "TEXT") //mais que 255 char
+    private String longDescription;
 
     public Game() {
 
     }
 
-    public Game(Long id, String title, Integer year, String genre, String plataform, Double score, String imgUrl, String shortDescription, String logDescription) {
+    public Game(Long id, String title, Integer year, String genre, String platforms, Double score, String imgUrl, String shortDescription, String logDescription) {
         this.id = id;
         this.title = title;
         this.year = year;
         this.genre = genre;
-        this.plataform = plataform;
+        this.platforms = platforms;
         this.score = score;
         this.imgUrl = imgUrl;
         this.shortDescription = shortDescription;
-        this.logDescription = logDescription;
+        this.longDescription = longDescription;
     }
 
     public Long getId() {
@@ -70,12 +75,12 @@ public class Game {
         this.genre = genre;
     }
 
-    public String getPlataform() {
-        return plataform;
+    public String getPlatforms() {
+        return platforms;
     }
 
-    public void setPlataform(String plataform) {
-        this.plataform = plataform;
+    public void setPlatforms(String platforms) {
+        this.platforms = platforms;
     }
 
     public Double getScore() {
@@ -102,12 +107,12 @@ public class Game {
         this.shortDescription = shortDescription;
     }
 
-    public String getLogDescription() {
-        return logDescription;
+    public String getLongDescription() {
+        return longDescription;
     }
 
-    public void setLogDescription(String logDescription) {
-        this.logDescription = logDescription;
+    public void setLongDescription(String longDescription) {
+        this.longDescription = longDescription;
     }
 
     @Override
