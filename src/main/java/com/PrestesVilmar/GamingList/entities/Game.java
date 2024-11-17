@@ -23,7 +23,6 @@ public class Game {
     @Column(columnDefinition = "TEXT")
     private String shortDescription;
 
-
     @Column(columnDefinition = "TEXT") //mais que 255 char
     private String longDescription;
 
