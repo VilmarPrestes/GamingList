@@ -3,6 +3,7 @@ package com.PrestesVilmar.GamingList.services;
 import com.PrestesVilmar.GamingList.dto.GameDTO;
 import com.PrestesVilmar.GamingList.dto.GameMinDTO;
 import com.PrestesVilmar.GamingList.entities.Game;
+import com.PrestesVilmar.GamingList.projections.GameMinProjection;
 import com.PrestesVilmar.GamingList.repositories.GameRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -26,6 +27,12 @@ public class GameService {
     @Transactional(readOnly = true)
     public List<GameMinDTO> findAll(){
         List<Game> result = gameRepository.findAll();
+        return result.stream().map(x -> new GameMinDTO(x)).toList();
+    }
+
+    @Transactional(readOnly = true)
+    public List<GameMinDTO> findByList(Long listId){
+        List<GameMinProjection> result = gameRepository.searchByList(listId);
         return result.stream().map(x -> new GameMinDTO(x)).toList();
     }
 }
