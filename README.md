@@ -2,6 +2,8 @@
 
 ## Modelo de domínio GamingList
 
+![dslist-model](https://github.com/user-attachments/assets/706e619e-c39a-45b4-b5a0-e1d13d346ea0)
+
 ## Trechos de código
 
 ### Plug-in Maven
