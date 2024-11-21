@@ -1,5 +1,19 @@
 # Projeto GamingList 
 
+Projeto desenvolvido como estudo de conceitos fundamentais do Java Spring e desenvolvimento backend em camadas, seguindo boas práticas de programação e arquitetura de software. Este projeto é uma API REST para gerenciamento de listas de jogos, permitindo o consumo de dados de jogos organizados por listas, além de explorar a utilização de DTOs (Data Transfer Objects) para transferência eficiente de dados.
+
+🚀 Funcionalidades
+Listagem de todas as listas de jogos disponíveis.
+Listagem de jogos pertencentes a uma lista específica.
+Estrutura modular que promove reusabilidade e manutenção do código.
+🔧 Tecnologias e Práticas Utilizadas
+Java Spring Framework - Criação da API REST utilizando dependências modernas do Spring (como Spring Boot e Spring Data JPA).
+Arquitetura em camadas - Separação do código em camadas como Controller, Service e Repository para garantir clareza, manutenibilidade e escalabilidade.
+Padrões de projeto - Aplicação de boas práticas para facilitar extensibilidade e organização do código.
+Uso de DTOs - Transferência eficiente de dados entre camadas e redução de exposição de entidades diretamente.
+Banco de dados relacional - Modelagem de dados utilizando MER (Modelo Entidade-Relacionamento) e DER (Diagrama Entidade-Relacionamento), além da integração com bancos de dados via JPA/Hibernate.
+Chaves compostas e mapeamento de entidades - Implementação de relacionamento entre tabelas usando chaves estrangeiras e anotações do JPA, como @Embeddable e @ManyToOne.
+
 ## Modelo de domínio GamingList
 
 ![dslist-model](https://github.com/user-attachments/assets/706e619e-c39a-45b4-b5a0-e1d13d346ea0)
